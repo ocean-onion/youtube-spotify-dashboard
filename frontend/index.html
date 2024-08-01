@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube & Spotify Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+  <div class="container mx-auto p-8">
+    <h1 class="text-4xl text-center text-blurple mb-8">YouTube & Spotify Dashboard</h1>
+    <div class="mb-8">
+      <a href="/api/youtube/auth" class="bg-blurple p-2 rounded mx-2">Connect YouTube</a>
+      <a href="/api/spotify/auth" class="bg-blurple p-2 rounded mx-2">Connect Spotify</a>
+    </div>
+    <div class="mb-8">
+      <input type="text" id="youtube-url" class="w-full p-2 rounded bg-gray-800" placeholder="Enter YouTube URL">
+      <div class="flex justify-center mt-4">
+        <button id="download-mp4" class="bg-blurple p-2 rounded mx-2">Download as MP4</button>
+        <button id="download-mp3" class="bg-blurple p-2 rounded mx-2">Download as MP3</button>
+      </div>
+    </div>
+    <div id="youtube-stats" class="mb-8">
+      <h2 class="text-2xl mb-4">YouTube Watch History Stats</h2>
+      <div class="bg-gray-800 p-4 rounded">
+        <!-- YouTube stats will be displayed here -->
+      </div>
+    </div>
+    <div id="spotify-stats">
+      <h2 class="text-2xl mb-4">Spotify Stats</h2>
+      <div class="bg-gray-800 p-4 rounded">
+        <!-- Spotify stats will be displayed here -->
+      </div>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
